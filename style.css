@@ -1,0 +1,69 @@
+:root {
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: light) {
+  .element {
+    color: black;
+    background-color: white;
+  }
+  .home_button {
+    background-image: url(assets/home_black.png);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .element {
+    color: white;
+    background-color: black;
+  }
+  .home_button {
+    background-image: url(assets/home_white.png);
+  }
+}
+
+.header {
+    position: sticky;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    margin: -10px;
+    background: #2D4671;
+    color: #2D4671;
+}
+
+.home_button {
+    width: 7em; 
+    height: 4.5em; 
+    position: relative;
+    background-color: transparent; 
+    border: none; 
+    background-size: 100%;
+    transition: 0.5s;
+}
+
+.home_button:hover {
+    rotate: 5deg;
+  }
+
+.home_button:active {
+    rotate: -5deg;
+}
+
+.star_button {
+  width: 4em; 
+  height: 4em; 
+  position: relative;
+  margin-left: 2%;
+  border: none;
+  background-color: transparent; 
+  background-image: url(assets/star_smile.png);
+  background-size: 100%;
+  transition-duration: 0.5s;
+}
+
+.star_button:hover {
+  background-image: url(assets/star_open_mouth.png);
+  rotate: -3deg;
+}
