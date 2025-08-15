@@ -1,21 +1,50 @@
 :root {
   color-scheme: light dark;
+  --clr-primary-a0: #ffffff;
+  --clr-primary-a10: #d4d9e9;
+  --clr-primary-a20: #a9b4d3;
+  --clr-primary-a30: #7e90bd;
+  --clr-primary-a40: #526ea7;
+  --clr-primary-a50: #1a4e91;
+  --clr-primary-a60: #1b3f72;
+  --clr-primary-a70: #1a3055;
+  --clr-primary-a80: #162239;
+  --clr-primary-a90: #101520;
+  --clr-primary-a100: #000000;
+
+  --prussian-blue: #012a4aff;
+  --indigo-dye: #013a63ff;
+  --indigo-dye-2: #01497cff;
+  --indigo-dye-3: #014f86ff;
+  --ucla-blue: #2a6f97ff;
+  --cerulean: #2c7da0ff;
+  --air-force-blue: #468fafff;
+  --air-superiority-blue: #61a5c2ff;
+  --sky-blue: #89c2d9ff;
+  --light-blue: #a9d6e5ff;
 }
+
 
 @media (prefers-color-scheme: light) {
   .element {
     color: black;
     background-color: white;
   }
+  .header {
+    background: var(--air-force-blue);
+  }
   .home_button {
-    background-image: url(assets/home_black.png);
+    background-image: url(assets/home_white.png);
   }
 }
 
 @media (prefers-color-scheme: dark) {
   .element {
     color: white;
-    background-color: black;
+    background-color: var(--prussian-blue);
+  }
+  .header {
+    background: var(--indigo-dye-2);
   }
   .home_button {
     background-image: url(assets/home_white.png);
@@ -29,8 +58,6 @@
     justify-content: space-between;
     top: 0;
     margin: -10px;
-    background: #2D4671;
-    color: #2D4671;
 }
 
 .home_button {
