@@ -1,28 +1,54 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Home of FocusedFaust</title>
-        <link rel="stylesheet" href="style.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    
-    <body>
-        <div class="header">
-            <button class="star_button"></button>
-            <button class="home_button"></button>
-            <button style="float: right; margin-right: 2%;">menu</button>
-        </div>
-        <!--<p style="padding-top: 15px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, molestiae blanditiis laborum modi tenetur aliquam! Aliquid nemo est tempora praesentium veniam itaque sit similique tempore autem, accusantium, ex earum reprehenderit.</p>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum rerum expedita ex error porro, aliquam voluptatem facilis nostrum corrupti voluptatibus voluptate beatae iusto, ullam, consectetur voluptas tenetur dolor dolorum repellendus.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur a porro ducimus eligendi quo neque expedita, inventore ex consequuntur amet eveniet quaerat repellat maiores tempore reiciendis architecto aliquam ab necessitatibus.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti consectetur repudiandae ducimus non quia obcaecati eius sapiente. Vitae, nulla perferendis nisi tempora explicabo, saepe voluptatibus aperiam ut dolore fugit maiores!</p>-->
-        <div style="display: flex; column-gap: 3%; padding-top: 30px; align-items: flex-start;">
-            <img src="assets/petralia-soprana-july-2025.jpg" alt="The town of Petralia Soprana in July 2025, taken by me" style="min-width: 30%; max-width: 40%; margin-left: 3%;">
-            <div>
-                <p>Hello, my name is Faust. I'm a student at engineering school in computer science, doing my bachelor's degree.</p>
-                <p>On the side, I'm also a creative mind and I love making art. I believe this is why I love programming, it feels too me like art, because it allows you to create something. Anyways, I wanted to build this website to showcase things I have done and to share it with others. Hope you like it!</p>
+
+<head>
+    <title>Home of FocusedFaust</title>
+    <link rel="stylesheet" href="style.css">
+    <script async src="scripts/main.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="header">
+        <div style="margin-left: 2%; display: inline-block; position: relative;">
+            <button onclick="displayMenu()" id="menuBtn">menu</button>
+            <div class="dropdownMenu" id="dropdownMenu">
+                <a href="#">Home</a>
+                <a href="#">Button 2</a>
+                <a href="#">Button 3</a>
             </div>
         </div>
-        
-    </body>
+        <button class="home_button" id="topBtn" onclick="topFunction()"></button>
+        <button class="star_button"></button>
+    </div>
+
+    <div style="display: flex; column-gap: 3%; padding-top: 30px; align-items: flex-start;">
+        <img src="assets/petralia-soprana-july-2025.jpg" alt="The town of Petralia Soprana in July 2025, taken by me"
+            title="The town of Petralia Soprana (July 2025)" style="min-width: 20%; max-width: 50%; margin-left: 3%;">
+        <div class="text_paragraph">
+            <p>Hello, my name is Faust. I'm a student at engineering school in computer science, doing my bachelor's
+                degree.</p>
+            <p>On the side, I'm also a creative mind and I love making art. I believe this is why I like programming, it
+                feels too me similar to art, because it allows you to create something. Anyways, I wanted to build this
+                website to showcase things I have done and to share it with others. Hope you like it!</p>
+        </div>
+    </div>
+
+    <div style="display: flex; column-gap: 3%; padding-top: 30px; align-items: flex-start;">
+        <div class="text_paragraph" style="margin-left: 3%;">
+            <p>To navigate this website, you can click on the drawings at the top of the page or use the menu (top right
+                corner). For now, there is nothing showcased, simply because I have not yet coded everything ^^" but
+                feel free to come back later! (Also, these picture were taken by me.)</p>
+        </div>
+        <img src="assets/temple-heracles-agrigento-july-2025.jpg"
+            alt="The temple of Heracles in the Valle dei Templi in Sicily, taken in July 2025 by me"
+            title="The temple of Heracles in the Valle dei Templi in Sicily, on a clear summer night (July 2025)"
+            style="min-width: 30%; max-width: 40%; margin-right: 3%;">
+    </div>
+
+    <div class="footer">
+        <p>Made with ❤️ and hot chocolates</p>
+    </div>
+</body>
+
 </html>
