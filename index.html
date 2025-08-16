@@ -9,20 +9,33 @@
 </head>
 
 <body>
+    <!-- Header for the website page -->
     <div class="header">
         <div style="margin-left: 2%; display: inline-block; position: relative;">
-            <button onclick="displayMenu()" id="menuBtn">menu</button>
+            <button onclick="displayMenu()" class="menu_button"></button>
             <div class="dropdownMenu" id="dropdownMenu">
                 <a href="#">Home</a>
-                <a href="#">Button 2</a>
-                <a href="#">Button 3</a>
+                <a href="#">Portflio</a>
+                <a href="portfolio/music/index.html">| Music</a>
             </div>
         </div>
         <button class="home_button" id="topBtn" onclick="topFunction()"></button>
         <button class="star_button"></button>
     </div>
 
+    <!-- Portfolio links -->
+    <div style="display: flex; justify-content: space-between; padding-top: 30px;">
+        <a href="portfolio/music/index.html">
+            <img src="assets/compact_disc.png" alt="Your average CD" style="width: 30%;" title="Take me to the music!">
+        </a>
+    </div>
+
+    <!-- Text paragraphs and photos-->
     <div style="display: flex; column-gap: 3%; padding-top: 30px; align-items: flex-start;">
+        <div style="display: none;">
+            <img src="assets/star_open_mouth.png" alt="preload">
+            <img src="assets/menu_raised.png" alt="preload">
+        </div>
         <img src="assets/petralia-soprana-july-2025.jpg" alt="The town of Petralia Soprana in July 2025, taken by me"
             title="The town of Petralia Soprana (July 2025)" style="min-width: 20%; max-width: 50%; margin-left: 3%;">
         <div class="text_paragraph">
@@ -36,7 +49,7 @@
 
     <div style="display: flex; column-gap: 3%; padding-top: 30px; align-items: flex-start;">
         <div class="text_paragraph" style="margin-left: 3%;">
-            <p>To navigate this website, you can click on the drawings at the top of the page or use the menu (top right
+            <p>To navigate this website, you can click on the drawings at the top of the page or use the menu (top left
                 corner). For now, there is nothing showcased, simply because I have not yet coded everything ^^" but
                 feel free to come back later! (Also, these picture were taken by me.)</p>
         </div>

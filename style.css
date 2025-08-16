@@ -109,6 +109,19 @@
   rotate: -3deg;
 }
 
+.menu_button {
+  background-image: url(assets/menu_raised.png);
+  width: 5em;
+  height: 2em;
+  background-size: 100%;
+  background-color: transparent;
+  border: none;
+}
+
+.menu_button:active {
+  background-image: url(assets/menu.png);
+}
+
 .dropdownMenu {
   background-color: var(--air-force-blue);
   display: none;
