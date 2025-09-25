@@ -3,13 +3,28 @@
 
 <head>
     <title>FocusedFaust - Music</title>
-    <link rel="stylesheet" href="style.css">
-    <script async src="scripts/main.js"></script>
+    <link rel="stylesheet" href="../../style.css">
+    <script async src="../../scripts/main.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
+    <!-- Header for the website page -->
     <div class="header">
-        <p>This is my header</p>
+        <div style="margin-left: 2%; display: inline-block; position: relative;">
+            <button onclick="displayMenu()" class="menu_button"></button>
+            <div class="dropdownMenu" id="dropdownMenu">
+                <a href="../../index.html">Home</a>
+                <a href="#">Portflio</a>
+                <a href="../music/index.html">| Music</a>
+                <a href="#">| Drawings</a>
+            </div>
+        </div>
+        <button class="home_button" id="topBtn" onclick="topFunction()"></button>
+        <button class="star_button"></button>
+    </div>
+
+    <div style="display: flex;">
+        <img src="../../assets/under_construction.png" alt="This page is still under construction" style="display: inline-block; position: absolute; margin-left: 35%; margin-top: 10%; width: 25%;">
     </div>
 </body>

@@ -40,6 +40,10 @@
   .home_button {
     background-image: url(assets/home_white.png);
   }
+
+  .text_link {
+    color: var(--indigo-dye);
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -54,6 +58,10 @@
 
   .home_button {
     background-image: url(assets/home_white.png);
+  }
+
+  .text_link {
+    color: var(--sky-blue);
   }
 }
 
@@ -142,6 +150,10 @@
 
 .dropdownMenu a:hover {
   color: #000000;
+}
+
+.link-button {
+  cursor: pointer;
 }
 
 .text_paragraph {
