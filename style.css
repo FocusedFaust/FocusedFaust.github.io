@@ -152,8 +152,19 @@
   color: #000000;
 }
 
-.link-button {
-  cursor: pointer;
+/*Used to display the images + links at the top of the page*/
+.top-display {
+  display:flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-end;
+}
+.top-display a {
+  display:contents;
+}
+.top-display a img {
+  width: 20%;
 }
 
 .text_paragraph {
