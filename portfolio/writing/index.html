@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FocusedFaust - Writings</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="writing.css">
+    <link rel="application/json" href="../../assets/portfolio/writings/poems.json">
+    <script async src="../../scripts/main.js"></script>
+    <script async src="writing.js" type="module"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <!-- Header for the website page -->
+    <div class="header">
+        <div style="margin-left: 2%; display: inline-block; position: relative;">
+            <button onclick="displayMenu()" class="menu_button"></button>
+            <div class="dropdownMenu" id="dropdownMenu">
+                <a href="../../index.html">Home</a>
+                <a href="#">Portflio</a>
+                <a href="../music/index.html">| Music</a>
+                <a href="../drawings/index.html">| Drawings</a>
+            </div>
+        </div>
+        <button class="home_button" id="topBtn" onclick="topFunction()"></button>
+        <button class="star_button"></button>
+    </div>
+
+    <div style="display: flex; justify-content: center; margin-top: 5%;">
+        <img src="../../assets/under_construction.png" alt="This page is still under construction" style="width: 20%;"/>
+    </div>
+        
+    <div class="display-poems" id="display-poems"></div>
+</body>
