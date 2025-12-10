@@ -9,5 +9,28 @@
         "some line",
         "and some text there",
         "a haiku"
+    ],
+    "poem3": [
+        "this is",
+        "my third",
+        "attempt",
+        "at a poem"
+    ],
+    "poem4": [
+        "line 1",
+        "line 2",
+        "line 3",
+        "unexpected line 4"
+    ],
+    "poem5": [
+        "some line",
+        "and some text there",
+        "a haiku"
+    ],
+    "poem6": [
+        "this is",
+        "my sixth",
+        "attempt",
+        "at a poem"
     ]
 }
