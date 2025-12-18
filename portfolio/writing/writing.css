@@ -4,19 +4,19 @@
         border-color: var(--prussian-blue);
     }
 }
+
 @media (prefers-color-scheme: dark) {
     .display-poems p {
         background-color: var(--cerulean);
         border-color: var(--sky-blue);
     }
-    
 }
 
 .display-poems {
     display: flex;
     justify-content: space-evenly;
     align-items: flex-start;
-    padding-top: 30px; 
+    padding-top: 30px;
     margin-top: 5%;
     flex-wrap: wrap;
     font-family: 'Courier New', Courier, monospace;
@@ -26,4 +26,5 @@
     padding: 15px;
     border-style: none solid solid none;
     border-radius: 15px;
+    font-family: Lilex, 'Courier New', Courier, monospace;
 }
