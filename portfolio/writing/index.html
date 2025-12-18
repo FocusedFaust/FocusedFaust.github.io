@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FocusedFaust - Writings</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="writing.css">
+    <link rel="application/json" href="../../assets/portfolio/writings/poems.json">
+    <script async src="../../scripts/main.js"></script>
+    <script async src="writing.js" type="module"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <!-- Header for the website page -->
+    <div class="header">
+        <div style="margin-left: 2%; display: inline-block; position: relative;">
+            <button onclick="displayMenu()" class="menu_button"></button>
+            <div class="dropdownMenu" id="dropdownMenu">
+                <a href="../../index.html">Home</a>
+                <a href="#">Portfolio</a>
+                <a href="../music/index.html">| Music</a>
+                <a href="../drawings/index.html">| Drawings</a>
+                <a href="#">| Writing</a>
+            </div>
+        </div>
+        <button class="home_button" id="topBtn" onclick="topFunction()"></button>
+        <button class="star_button"></button>
+    </div>
+
+    <div class="text_paragraph"
+        style="display: flex; flex-direction: column; margin-left: 5%; margin-right: 5%; margin-top: 5%;">
+        <div style="width: 50%; margin-bottom: 5%; align-self: flex-end;">
+            Mon chat sur le carreau cherchant une litière <br>
+            Agite sans repos son corps maigre et galeux; <br>
+            L'âme d'un vieux poète erre dans la gouttière <br>
+            Avec la triste voix d'un fantôme frileux. <br>
+            <p class="has_tooltip">
+                - Charles Baudelaire, extrait de <span style="font-style: italic;">LXXV - Spleen</span> dans <span
+                    style="font-style: italic;">Les Fleurs du Mal</span>
+                <span class="tooltiptext" style="top: 20%; left: 5%; max-width: 40%;">You may not be a fan of Baudelaire
+                    but I absolutely love Les Fleurs du Mal and the way he saw Beauty not as something that is agreeable
+                    but something that is strange, surprising, that questions. <span style="font-style: italic;">"C'est
+                    quelque chose d'ardent et de triste, quelque chose d'un peu vague, laissant carrière à la
+                    conjecture."</span></span>
+            </p>
+        </div>
+        <div style="width: 70%;">
+            Poetry is a means and an end for me. I've been writing poems for a long time, from every corner of my brain.
+            These poems are scattered across the notebooks I've filled throughout the years. I've gathered some here,
+            in hopes someone will like them and they will resonate with you.
+        </div>
+    </div>
+
+    <div class="display-poems" id="display-poems"></div>
+</body>
