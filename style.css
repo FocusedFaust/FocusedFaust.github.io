@@ -1,3 +1,8 @@
+/*
+z-index 1: tooltips
+z-index 2: header
+*/
+
 :root {
   scroll-behavior: smooth;
 
@@ -26,6 +31,12 @@
   --light-blue: #a9d6e5ff;
 }
 
+@media (prefers-reduced-motion: reduce) { /*remove all animations and transitions for accessibility*/
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
 
 @media (prefers-color-scheme: light) {
   .element {
@@ -65,6 +76,11 @@
   }
 }
 
+@font-face {
+  font-family: Lilex;
+  src: url(assets/font/Lilex-VariableFont_wght.ttf);
+}
+
 .header {
   position: sticky;
   display: flex;
@@ -72,6 +88,7 @@
   justify-content: space-between;
   top: 0;
   margin: -10px;
+  z-index: 2;
 }
 
 .footer {
@@ -152,6 +169,24 @@
   color: #000000;
 }
 
+/* Tooltip text */
+.tooltiptext {
+  visibility: hidden;
+  background-color: black; /*TODO: set according to theme*/
+  color: #ffffff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text on hover */
+.has_tooltip:hover .tooltiptext {
+  visibility: visible;
+  font-size: medium;
+}
+
 /*Used to display the images + links at the top of the page*/
 .top-display {
   display:flex;
@@ -168,8 +203,8 @@
 }
 
 .text_paragraph {
-  font-family: 'Courier New', Courier, monospace;
-  font-size: larger;
+  font-family: 'Lilex', 'Courier New', Courier, monospace;
+  font-size: large;
 }
 
 /*Used by JS to temporarily show an element, must be at bottom*/
