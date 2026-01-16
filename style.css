@@ -158,6 +158,12 @@ z-index 2: header
   position: absolute;
 }
 
+.dropdownMenu {
+  padding: 15px;
+  font-family: 'Lilex', 'Courier New', Courier, monospace;
+  border-radius: 5px;
+}
+
 .dropdownMenu a {
   display: block;
   color: var(--prussian-blue);
