@@ -26,6 +26,16 @@
         "Des notes suspendues à travers le temps,",
         "Si jolies, je sais qu'on en fait pas tant."
     ],
+    "love": [
+        "And when the world ends,",
+        "We'll be holding hands.",
+        "As empires burns,",
+        "I'll map your freckles.",
+        "As civilizations fall,",
+        "I'll be carving your name in my skin,",
+        "So the next ones will find traces of us",
+        "And they will know how much I loved you."
+    ],
     "Adoration": [
         "Je suis à genoux, la tête en arrière",
         "Ce n'est pas pour Dieu, que je perds mes bonnes manières.",
@@ -77,14 +87,52 @@
         "Sorry that I have to adapt",
         "and not live like normal people"
     ],
-        "love": [
-        "And when the world ends,",
-        "We'll be holding hands.",
-        "As empires burns,",
-        "I'll map your freckles.",
-        "As civilizations fall,",
-        "I'll be carving your name in my skin,",
-        "So the next ones will find traces of us",
-        "And they will know how much I loved you."
+    "note": [
+        "You've written me things I cannot forget",
+        "Imagined things that now spin in my mind",
+        "I freeze when someone looks too much like you",
+        "Or likes the images of me too much",
+        "",
+        "How could you turn my body and my brain",
+        "Into an object for your desire",
+        "I was only a teenager",
+        "Closer in age to that of your children."
+    ],
+    "note_haiku": [
+        "Go and burn in hell",
+        "For all that you did to me",
+        "Fucking abuser."
+    ],
+    "memories of her": [
+        "Your bios still match and your still have a folder",
+        "Inside your gallery, with pictures of her,",
+        "You put a heart there, right next to her name.",
+        "A photo of you both hung high on your wall,",
+        "I see it when I come, it hasn't moved at all.",
+        "",
+        "I have found over time memories of her",
+        "Scattered around your place, so many reminders",
+        "So many traces still woven in your life.",
+        "",
+        "I do not want to know it,",
+        "Know how much you have loved her.",
+        "I guess it's lucky for me,",
+        "She can't see that anymore."
+    ],
+    "mon corps": [
+        "Je ne saurais dire, où s'en va mon esprit,",
+        "Lorsque ma peau reçoit toutes ses caresses,",
+        "Mais au fond je ne sens que les coups de son corps,",
+        "Et son plaisir qui monte, au-dessus de ma chair.",
+        "",
+        "Un oiseau affolé, une cage inerte,",
+        "Penser à n'importe quoi, surtout pas à ça.",
+        "Je ne peux qu'espérer que tu finisses vite,",
+        "Mais te rends-tu compte que je ne bouge déjà plus ?",
+        "",
+        "Ce n'est pas que tes caresses soient méchantes,",
+        "Je veux bien croire que tu y mets ta douceur.",
+        "Simplement, ma peau m'a été comme détachée.",
+        "Au moins, dis-moi, mon corps est-il agréable ?"
     ]
 }
