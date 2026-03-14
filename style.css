@@ -19,15 +19,15 @@ z-index 2: header
   --clr-primary-a90: #101520;
   --clr-primary-a100: #000000;
 
-  --prussian-blue: #012a4aff;
+  --deep-space-blue: #012a4aff;
   --indigo-dye: #013a63ff;
   --indigo-dye-2: #01497cff;
   --indigo-dye-3: #014f86ff;
-  --ucla-blue: #2a6f97ff;
+  --rich-cerulean: #2a6f97ff;
   --cerulean: #2c7da0ff;
   --air-force-blue: #468fafff;
-  --air-superiority-blue: #61a5c2ff;
-  --sky-blue: #89c2d9ff;
+  --steel-blue: #61a5c2ff;
+  --sky-blue-light-light: #89c2d9ff;
   --light-blue: #a9d6e5ff;
 }
 
@@ -60,7 +60,7 @@ z-index 2: header
 @media (prefers-color-scheme: dark) {
   .element {
     color: white;
-    background-color: var(--prussian-blue);
+    background-color: var(--deep-space-blue);
   }
 
   .header {
@@ -72,7 +72,7 @@ z-index 2: header
   }
 
   .text_link {
-    color: var(--sky-blue);
+    color: var(--sky-blue-light);
   }
 }
 
@@ -100,7 +100,7 @@ z-index 2: header
 }
 
 .art_display {
-  border-color: var(--prussian-blue);
+  border-color: var(--deep-space-blue);
   border-style: ridge;
   border-width: 10px;
   width: calc(100% * (1/3) + 50px);
@@ -175,7 +175,7 @@ z-index 2: header
 
 .dropdownMenu a {
   display: block;
-  color: var(--prussian-blue);
+  color: var(--deep-space-blue);
   left: 0;
   text-decoration: none;
 }

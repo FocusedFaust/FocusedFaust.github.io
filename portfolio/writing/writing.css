@@ -1,14 +1,14 @@
 @media (prefers-color-scheme: light) {
     .display-poems p {
-        background-color: var(--air-superiority-blue);
-        border-color: var(--prussian-blue);
+        background-color: var(--steel-blue);
+        border-color: var(--deep-space-blue);
     }
 }
 
 @media (prefers-color-scheme: dark) {
     .display-poems p {
         background-color: var(--cerulean);
-        border-color: var(--sky-blue);
+        border-color: var(--sky-blue-light);
     }
 }
 
