@@ -1,11 +1,14 @@
 {
     "Don't/You Call Me": {
-        "file": "../../assets/portfolio/music/Dont_YouCallMe.wav"
+        "file": "../../assets/portfolio/music/Dont_YouCallMe.wav",
+        "duration": 128
     },
     "Penduline Village Theme": {
-        "file": "../../assets/portfolio/games/penduline_v_stereo.wav"
+        "file": "../../assets/portfolio/games/penduline_v_stereo.wav",
+        "duration": 166
     },
     "May It Be": {
-        "file": "../../assets/portfolio/music/May It Be - Faust.mp3"
+        "file": "../../assets/portfolio/music/May It Be - Faust.mp3",
+        "duration": 205
     }
 }
