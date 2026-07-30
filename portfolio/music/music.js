@@ -6,7 +6,7 @@ for (const song in music) {
     cont.classList.add("song-display");
     
     var image = document.createElement("img");
-    image.id = "song-img"
+    image.id = "song-img";
     image.setAttribute("src", "../../assets/compact_disc.png");
     image.classList.add("song-image");
 
@@ -16,18 +16,23 @@ for (const song in music) {
     text.appendChild(title);
     var year = document.createElement("p");
     year.innerHTML = music[song]["date"].italics();
-    year.style = "font-weight: normal; margin: 0;"
+    year.style = "font-weight: normal; margin: 0;";
     text.appendChild(year);
     
     var audio = document.createElement("audio");
-    audio.id = "song-audio"
+    audio.id = "song-audio";
     audio.setAttribute("src", music[song]["file"]);
     audio.addEventListener("timeupdate", function() {
         var thisProgress = this.parentElement.querySelector("#song-progress");
         thisProgress.value = this.currentTime;
-       if (this.currentTime >= thisProgress.max) {
-            this.parentElement.querySelector("#song-play").click();
-        }
+    })
+    audio.addEventListener("ended", function(){
+        var thisImage = this.parentElement.children.namedItem("song-img");
+        var playBtn = this.parentElement.querySelector("#song-play");
+        this.currentTime = 0;
+        this.pause();
+        thisImage.classList.remove("rotating-image");
+        playBtn.innerHTML = "&#9654";
     })
 
     // All three buttons for the controls of the song
@@ -40,22 +45,16 @@ for (const song in music) {
     playButton.addEventListener("click", function() {
         var thisAudio = this.parentElement.parentElement.parentElement.children.namedItem("song-audio");
         var thisImage = this.parentElement.parentElement.parentElement.children.namedItem("song-img");
-        if (thisAudio.currentTime >= this.parentElement.querySelector("#song-progress").max) {
-            thisAudio.currentTime = 0;
-            thisImage.classList.remove("rotating-image");
-            this.innerHTML = "&#9654";
+        if (thisAudio.paused == true) {
+            // Play the audio, update the button and rotate the image
+            thisAudio.play();
+            this.innerHTML = "&#9613 &#9613";
+            thisImage.classList.add("rotating-image");
         } else {
-            if (thisAudio.paused == true) {
-                // Play the audio, update the button and rotate the image
-                thisAudio.play();
-                this.innerHTML = "&#9613 &#9613";
-                thisImage.classList.add("rotating-image");
-            } else {
-                // Pause the audio, update the button and stop the image rotation
-                thisAudio.pause();
-                this.innerHTML = "&#9654";
-                thisImage.classList.remove("rotating-image");
-            }
+            // Pause the audio, update the button and stop the image rotation
+            thisAudio.pause();
+            this.innerHTML = "&#9654";
+            thisImage.classList.remove("rotating-image");
         }
     });
 
@@ -96,6 +95,4 @@ for (const song in music) {
     cont.appendChild(audio);
     cont.appendChild(text);
     display.appendChild(cont);
-
-    //TODO: Make play button pause all other songs (?)
 }
