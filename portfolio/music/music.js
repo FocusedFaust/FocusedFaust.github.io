@@ -3,13 +3,12 @@ import music from "../../assets/portfolio/music/entries.json" with {type: "json"
 var display = document.getElementById("cd-display");
 for (const song in music) {
     var cont = document.createElement("div");
-    cont.style = "display: flex; width: auto; height: 20vw; margin: 20px 20vw; background-color: var(--deep-space-blue); border-radius: 500px;"
+    cont.style = "display: flex; width: auto; height: 17vw; margin: 20px 20vw; background-color: var(--deep-space-blue); border-radius: 500px;"
     
     var image = document.createElement("img");
     image.id = "song-img"
     image.setAttribute("src", "../../assets/compact_disc.png");
     image.style = `display: block; margin-top: auto; height: inherit;`;
-    //image.classList.add("rotating-image");
 
     var text = document.createElement("div");
     text.style = `display: flex; flex-direction: column; align-items: center; justify-content: center; margin: auto; font-weight: bold;`;
@@ -23,12 +22,15 @@ for (const song in music) {
     var audio = document.createElement("audio");
     audio.id = "song-audio"
     audio.setAttribute("src", music[song]["file"]);
-    //audio.setAttribute("controls", "controls");
     audio.addEventListener("timeupdate", function() {
         var thisProgress = this.parentElement.querySelector("#song-progress");
         thisProgress.value = this.currentTime;
+       if (this.currentTime >= thisProgress.max) {
+            this.parentElement.querySelector("#song-play").click();
+        }
     })
 
+    // All three buttons for the controls of the song
     var controls = document.createElement("div");
     var playButton = document.createElement("button");
     playButton.id = "song-play";
@@ -38,20 +40,25 @@ for (const song in music) {
     playButton.addEventListener("click", function() {
         var thisAudio = this.parentElement.parentElement.parentElement.children.namedItem("song-audio");
         var thisImage = this.parentElement.parentElement.parentElement.children.namedItem("song-img");
-        if (thisAudio.paused == true) {
-            // Play the audio
-            thisAudio.play();
-            // Update the button text to 'Pause'
-            this.innerHTML = "&#9613 &#9613";
-            thisImage.classList.add("rotating-image");
-        } else {
-            // Pause the audio
-            thisAudio.pause();
-            // Update the button text to 'Play'
-            this.innerHTML = "&#9654";
+        if (thisAudio.currentTime >= this.parentElement.querySelector("#song-progress").max) {
+            thisAudio.currentTime = 0;
             thisImage.classList.remove("rotating-image");
+            this.innerHTML = "&#9654";
+        } else {
+            if (thisAudio.paused == true) {
+                // Play the audio, update the button and rotate the image
+                thisAudio.play();
+                this.innerHTML = "&#9613 &#9613";
+                thisImage.classList.add("rotating-image");
+            } else {
+                // Pause the audio, update the button and stop the image rotation
+                thisAudio.pause();
+                this.innerHTML = "&#9654";
+                thisImage.classList.remove("rotating-image");
+            }
         }
     });
+
     var backButton = document.createElement("button");
     backButton.innerHTML = "&#x23EE";
     backButton.style = "background: none; border: none; cursor: pointer; font-weight: bold;";
@@ -74,6 +81,7 @@ for (const song in music) {
         }
     })
 
+    // Progress bar of the song
     var songTime = document.createElement("progress");
     songTime.id = "song-progress";
     songTime.max = music[song]["duration"];
