@@ -3,15 +3,15 @@ import music from "../../assets/portfolio/music/entries.json" with {type: "json"
 var display = document.getElementById("cd-display");
 for (const song in music) {
     var cont = document.createElement("div");
-    cont.style = "display: flex; width: auto; height: 17vw; margin: 20px 20vw; background-color: var(--deep-space-blue); border-radius: 500px;"
+    cont.classList.add("song-display");
     
     var image = document.createElement("img");
     image.id = "song-img"
     image.setAttribute("src", "../../assets/compact_disc.png");
-    image.style = `display: block; margin-top: auto; height: inherit;`;
+    image.classList.add("song-image");
 
     var text = document.createElement("div");
-    text.style = `display: flex; flex-direction: column; align-items: center; justify-content: center; margin: auto; font-weight: bold;`;
+    text.classList.add("song-inner-div");
     var title = document.createTextNode(song);
     text.appendChild(title);
     var year = document.createElement("p");
@@ -34,7 +34,7 @@ for (const song in music) {
     var controls = document.createElement("div");
     var playButton = document.createElement("button");
     playButton.id = "song-play";
-    playButton.style = "background: none; border: none; cursor: pointer; font-weight: bold;";
+    playButton.classList.add("controls-button");
     playButton.innerHTML = "&#9654";
     // Event listener for the play/pause button
     playButton.addEventListener("click", function() {
@@ -61,7 +61,7 @@ for (const song in music) {
 
     var backButton = document.createElement("button");
     backButton.innerHTML = "&#x23EE";
-    backButton.style = "background: none; border: none; cursor: pointer; font-weight: bold;";
+    backButton.classList.add("controls-button");
     backButton.addEventListener("click", function() {
         var thisAudio = this.parentElement.parentElement.parentElement.children.namedItem("song-audio");
         thisAudio.currentTime -= 5;
@@ -72,7 +72,7 @@ for (const song in music) {
     
     var forwardButton = document.createElement("button");
     forwardButton.innerHTML = "&#x23ED";
-    forwardButton.style = "background: none; border: none; cursor: pointer; font-weight: bold;";
+    forwardButton.classList.add("controls-button");
     forwardButton.addEventListener("click", function() {
         var thisAudio = this.parentElement.parentElement.parentElement.children.namedItem("song-audio");
         thisAudio.currentTime += 5;
@@ -98,5 +98,4 @@ for (const song in music) {
     display.appendChild(cont);
 
     //TODO: Make play button pause all other songs (?)
-    //TODO: Style the song display + move hardcoded style to css file
 }
