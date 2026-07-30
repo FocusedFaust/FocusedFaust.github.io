@@ -3,18 +3,22 @@ import music from "../../assets/portfolio/music/entries.json" with {type: "json"
 var display = document.getElementById("cd-display");
 for (const song in music) {
     var cont = document.createElement("div");
-    cont.style = "display: flex; width: auto; margin:20px; background-color: var(--deep-space-blue); border-radius: 200px;"
+    cont.style = "display: flex; width: auto; height: 20vw; margin: 20px 20vw; background-color: var(--deep-space-blue); border-radius: 500px;"
     
     var image = document.createElement("img");
     image.id = "song-img"
     image.setAttribute("src", "../../assets/compact_disc.png");
-    image.style = `display: block; margin-top: auto; width: 30vw;`;
+    image.style = `display: block; margin-top: auto; height: inherit;`;
     //image.classList.add("rotating-image");
 
     var text = document.createElement("div");
     text.style = `display: flex; flex-direction: column; align-items: center; justify-content: center; margin: auto; font-weight: bold;`;
-    var p = document.createTextNode(song);
-    text.appendChild(p);
+    var title = document.createTextNode(song);
+    text.appendChild(title);
+    var year = document.createElement("p");
+    year.innerHTML = music[song]["date"].italics();
+    year.style = "font-weight: normal; margin: 0;"
+    text.appendChild(year);
     
     var audio = document.createElement("audio");
     audio.id = "song-audio"
@@ -72,7 +76,6 @@ for (const song in music) {
 
     var songTime = document.createElement("progress");
     songTime.id = "song-progress";
-    //songTime.min = 0;
     songTime.max = music[song]["duration"];
     songTime.value = audio.currentTime;
 

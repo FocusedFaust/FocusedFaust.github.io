@@ -1,14 +1,17 @@
 {
     "Don't/You Call Me": {
         "file": "../../assets/portfolio/music/Dont_YouCallMe.wav",
+        "date": "2026",
         "duration": 128
     },
     "Penduline Village Theme": {
         "file": "../../assets/portfolio/games/penduline_v_stereo.wav",
+        "date": "2023",
         "duration": 166
     },
     "May It Be": {
         "file": "../../assets/portfolio/music/May It Be - Faust.mp3",
+        "date": "2025",
         "duration": 205
     }
 }
