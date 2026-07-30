@@ -1,12 +1,12 @@
 import music from "../../assets/portfolio/music/entries.json" with {type: "json"};
 
 var display = document.getElementById("cd-display");
-console.log(music)
 for (const song in music) {
     var cont = document.createElement("div");
     cont.style = "display: flex; width: auto; margin:20px; background-color: var(--deep-space-blue); border-radius: 200px;"
     
     var image = document.createElement("img");
+    image.id = "song-img"
     image.setAttribute("src", "../../assets/compact_disc.png");
     image.style = `display: block; margin-top: auto; width: 30vw;`;
     //image.classList.add("rotating-image");
@@ -27,30 +27,58 @@ for (const song in music) {
 
     var controls = document.createElement("div");
     var playButton = document.createElement("button");
-    playButton.style = "background: none; border: none; cursor: pointer;";
+    playButton.id = "song-play";
+    playButton.style = "background: none; border: none; cursor: pointer; font-weight: bold;";
     playButton.innerHTML = "&#9654";
     // Event listener for the play/pause button
     playButton.addEventListener("click", function() {
         var thisAudio = this.parentElement.parentElement.parentElement.children.namedItem("song-audio");
+        var thisImage = this.parentElement.parentElement.parentElement.children.namedItem("song-img");
         if (thisAudio.paused == true) {
             // Play the audio
             thisAudio.play();
             // Update the button text to 'Pause'
-            this.innerHTML = "&#9615 &#9615";
+            this.innerHTML = "&#9613 &#9613";
+            thisImage.classList.add("rotating-image");
         } else {
             // Pause the audio
             thisAudio.pause();
             // Update the button text to 'Play'
             this.innerHTML = "&#9654";
+            thisImage.classList.remove("rotating-image");
         }
     });
+    var backButton = document.createElement("button");
+    backButton.innerHTML = "&#x23EE";
+    backButton.style = "background: none; border: none; cursor: pointer; font-weight: bold;";
+    backButton.addEventListener("click", function() {
+        var thisAudio = this.parentElement.parentElement.parentElement.children.namedItem("song-audio");
+        thisAudio.currentTime -= 5;
+        if (thisAudio.paused == true) {
+            this.parentElement.children.namedItem("song-play").click();
+        }
+    })
+    
+    var forwardButton = document.createElement("button");
+    forwardButton.innerHTML = "&#x23ED";
+    forwardButton.style = "background: none; border: none; cursor: pointer; font-weight: bold;";
+    forwardButton.addEventListener("click", function() {
+        var thisAudio = this.parentElement.parentElement.parentElement.children.namedItem("song-audio");
+        thisAudio.currentTime += 5;
+        if (thisAudio.paused == true) {
+            this.parentElement.children.namedItem("song-play").click();
+        }
+    })
 
     var songTime = document.createElement("progress");
     songTime.id = "song-progress";
+    //songTime.min = 0;
     songTime.max = music[song]["duration"];
     songTime.value = audio.currentTime;
 
+    controls.appendChild(backButton);
     controls.appendChild(playButton);
+    controls.appendChild(forwardButton);
     controls.appendChild(songTime);
     text.appendChild(controls);
     cont.appendChild(image);
@@ -59,6 +87,5 @@ for (const song in music) {
     display.appendChild(cont);
 
     //TODO: Make play button pause all other songs (?)
-    //TODO: Make play button rotate cd drawing
     //TODO: Style the song display + move hardcoded style to css file
 }
