@@ -1,0 +1,32 @@
+{
+    "Sunshine for Tomorrow": {
+        "file": "../../assets/portfolio/music/Sunshine For Tomorrow.wav",
+        "date": "2022",
+        "duration": 162
+    },
+    "Midnight Dreams": {
+        "file": "../../assets/portfolio/music/MidnightDreams.wav",
+        "date": "2022",
+        "duration": 80
+    },
+    "Lost In My Mind": {
+        "file": "../../assets/portfolio/music/LostInMyMind.wav",
+        "date": "2022",
+        "duration": 48
+    },
+    "Penduline Village Theme": {
+        "file": "../../assets/portfolio/games/penduline_v_stereo.wav",
+        "date": "2023",
+        "duration": 166
+    },
+    "May It Be": {
+        "file": "../../assets/portfolio/music/May It Be - Faust.mp3",
+        "date": "2025",
+        "duration": 205
+    },
+    "Don't/You Call Me": {
+        "file": "../../assets/portfolio/music/Dont_YouCallMe.wav",
+        "date": "2026",
+        "duration": 128
+    }
+}

@@ -1,0 +1,43 @@
+@keyframes smoothRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotating-image {
+  animation: smoothRotate 2s linear infinite;
+}
+
+.song-display {
+  display: flex;
+  width: auto;
+  height: 17vw;
+  margin: 20px 20vw;
+  background-color: var(--deep-space-blue);
+  border-radius: 500px;
+}
+
+.song-image {
+  display: block;
+  margin-top: auto;
+  height: inherit;
+}
+
+.song-inner-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  font-weight: bold;
+}
+
+.controls-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
