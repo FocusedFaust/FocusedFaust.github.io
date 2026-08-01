@@ -7,6 +7,18 @@
   }
 }
 
+@media (prefers-color-scheme: light) {
+  .song-display {
+    background-color: var(--cerulean);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .song-display {
+    background-color: var(--deep-space-blue);
+  }
+}
+
 .rotating-image {
   animation: smoothRotate 2s linear infinite;
 }
@@ -16,7 +28,6 @@
   width: auto;
   height: 17vw;
   margin: 20px 20vw;
-  background-color: var(--deep-space-blue);
   border-radius: 500px;
 }
 

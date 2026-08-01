@@ -55,6 +55,10 @@ z-index 2: header
   .text_link {
     color: var(--indigo-dye);
   }
+
+  .art_display {
+    border-color: var(--cerulean);
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -73,6 +77,10 @@ z-index 2: header
 
   .text_link {
     color: var(--sky-blue-light);
+  }
+
+  .art_display {
+    border-color: var(--deep-space-blue);
   }
 }
 
@@ -100,9 +108,8 @@ z-index 2: header
 }
 
 .art_display {
-  border-color: var(--deep-space-blue);
-  border-style: ridge;
-  border-width: 10px;
+  border-style: solid;
+  border-width: 5px;
   width: calc(100% * (1/3) + 50px);
   height: fit-content;
   margin: 15px;

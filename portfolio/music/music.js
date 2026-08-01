@@ -48,7 +48,7 @@ for (const song in music) {
         if (thisAudio.paused == true) {
             // Play the audio, update the button and rotate the image
             thisAudio.play();
-            this.innerHTML = "&#9613 &#9613";
+            this.innerHTML = "&#9208";
             thisImage.classList.add("rotating-image");
         } else {
             // Pause the audio, update the button and stop the image rotation
